@@ -1,0 +1,46 @@
+# CONFIG TEMPLATE FOR MINIMAX / OPERATOR
+# შეავსეთ ეს ფაილი რეალური მონაცემებით სანამ installer.py გაეშვება
+
+owner: "REPLACE_WITH_YOUR_GITHUB_USERNAME"
+repo_name: "pricefind-ai"
+project_name: "PriceFind AI Autopilot"
+
+github:
+  token: "REPLACE_WITH_YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
+
+vercel:
+  enabled: false        # თუ გინდათ Vercel, Minimax-მ უნდა ჩართოს და დაამატოს token
+  token: "REPLACE_WITH_VERCEL_TOKEN"
+  project_name: "pricefind-ai"
+  team_id: null
+
+env:
+  NODE_ENV: "production"
+  # ეს მნიშვნელობები Minimax/ოპერატორმა უნდა ჩაწეროს რეალური ძგაბეისისა და API-ის მიხედვით
+  NEXT_PUBLIC_API_URL: "https://api.pricefind-ai.com"
+  SUPABASE_URL: "https://your-project.supabase.co"
+  SUPABASE_ANON_KEY: "YOUR_SUPABASE_ANON_KEY_HERE"
+
+# API Configuration (to be filled later)
+amazon:
+  access_key: "YOUR_AMAZON_ACCESS_KEY"
+  secret_key: "YOUR_AMAZON_SECRET_KEY" 
+  associate_tag: "YOUR_AMAZON_ASSOCIATE_TAG"
+  region: "us"
+
+ebay:
+  client_id: "YOUR_EBAY_CLIENT_ID"
+  client_secret: "YOUR_EBAY_CLIENT_SECRET"
+  environment: "sandbox"
+
+# Additional Configuration
+features:
+  price_tracking: true
+  price_alerts: false
+  user_accounts: false
+  analytics: true
+
+deployment:
+  platform: "vercel"
+  branch: "main"
+  auto_deploy: true
