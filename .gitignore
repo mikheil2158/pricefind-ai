@@ -834,7 +834,7 @@
 # ==============================================================================
 # npm
 **/node_modules/
-**/package-lock.json
+# **/package-lock.json  # Uncommented to allow package-lock.json for GitHub Actions
 **/.npm/
 
 # Yarn
