@@ -34,10 +34,8 @@ jobs:
           pwd
           echo "Contents:"
           ls -la
-          echo "Installing dependencies with increased timeout..."
-          timeout 300 npm install --force
-        env:
-          DEBUG: "*"
+          echo "Installing dependencies with npm ci alternative..."
+          timeout 300 npm install --force --prefer-offline --no-audit
         timeout-minutes: 10
 
       - name: Build application
