@@ -34,10 +34,11 @@ jobs:
           pwd
           echo "Contents:"
           ls -la
-          echo "Installing dependencies with verbose logging..."
-          npm install --force --loglevel=verbose
+          echo "Installing dependencies with increased timeout..."
+          timeout 300 npm install --force
         env:
           DEBUG: "*"
+        timeout-minutes: 10
 
       - name: Build application
         run: npm run build
