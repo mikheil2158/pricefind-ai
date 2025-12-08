@@ -1,7 +1,7 @@
 {
   "name": "pricefind-ai",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "description": "PriceFind AI - Intelligent Price Comparison Platform",
   "scripts": {
     "dev": "next dev",
