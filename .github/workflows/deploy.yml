@@ -24,7 +24,20 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --force
+        run: |
+          echo "Starting npm install..."
+          echo "Node.js version:"
+          node --version
+          echo "npm version:"
+          npm --version
+          echo "Current directory:"
+          pwd
+          echo "Contents:"
+          ls -la
+          echo "Installing dependencies with verbose logging..."
+          npm install --force --loglevel=verbose
+        env:
+          DEBUG: "*"
 
       - name: Build application
         run: npm run build
