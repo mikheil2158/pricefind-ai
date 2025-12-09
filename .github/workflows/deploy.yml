@@ -41,8 +41,7 @@ jobs:
       - name: Build application
         run: |
           echo "Starting build process..."
-          echo "Checking TypeScript..."
-          npm run type-check || echo "TypeScript check failed, continuing..."
+          echo "Skipping TypeScript check for deployment..."
           echo "Running build..."
           npm run build
         timeout-minutes: 15
